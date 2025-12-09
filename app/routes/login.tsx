@@ -1,16 +1,11 @@
-import type { Route } from "./+types/login";
+import { LoginForm } from "@/components/auth/login-form";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "Login - NTTF ERP" },
-    { name: "description", content: "NTTF ERP Software" },
-  ];
-}
-
-export default function Login() {
+export default function Page() {
   return (
-    <div>
-      <h1>Login Page</h1>
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <LoginForm />
+      </div>
     </div>
   );
 }
