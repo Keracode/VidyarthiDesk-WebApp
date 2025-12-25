@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { AuthProvider } from "@/components/providers/auth-provider";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -34,7 +35,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
