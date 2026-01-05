@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useAuth } from "@/components/providers/auth-provider";
 import { useState } from "react";
-import { redirect, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export function LoginForm({
   className,
@@ -37,7 +37,7 @@ export function LoginForm({
 
     try {
       await login(email, password);
-      return navigate("/");
+      return navigate("/dashboard");
     } catch (err: any) {
       setError(
         err.response?.data?.error ||

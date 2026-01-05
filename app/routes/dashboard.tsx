@@ -1,16 +1,16 @@
-import type { Route } from "./+types/student";
+import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Student - NTTF ERP" },
+    { title: "Dashboard - NTTF ERP" },
     { name: "description", content: "NTTF ERP Software" },
   ];
 }
 
-export default function Student() {
+export default function Dashboard() {
   return (
     <div>
-      <h1>Student Page</h1>
+      <h1>Dashboard</h1>
     </div>
   );
 }
